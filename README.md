@@ -1,4 +1,4 @@
-#Todo List
+#TodoList
 #By using Django Framework
 #It easy to use 
 
