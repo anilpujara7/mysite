@@ -1,2 +1,2 @@
-#Todo List
-#By using Django Framework
+Todo List
+By using Django Framework
