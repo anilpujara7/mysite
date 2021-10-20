@@ -1,2 +1,3 @@
-Todo List
-By using Django Framework
+#Todo List
+#By using Django Framework
+#It easy to use 
