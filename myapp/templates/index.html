@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+<!--title-->
+{% block title %}Index Page{% endblock title %}
+<!--Content-->
+{% block content %}
+
+<div class="container mt-3">
+  <h1 class="text-center">Todo List</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th>Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for list in data %}
+      <tr>
+        <th scope="row">{{ list.id }}</th>
+        <td>{{ list.title }}</td>
+        <td>{{ list.content }}</td>
+        <td>{{list.date}}</td>
+
+        <td>
+          <a class="btn btn-info" href="update/{{list.id}} ">Edit</a>
+          <a class="btn btn-danger" href="/delete/{{list.id}}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <div class="card">
+        <div class="card-body">
+          <center>
+            <h4 class="text-capitalize">You may create a Todo:</h4>
+            <a href="/add" class="btn btn-success">Create</a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
+</div>
